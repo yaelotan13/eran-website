@@ -33,7 +33,7 @@ const useStyle = makeStyles((theme) => ({
             marginTop: '6%'
         },
         [theme.breakpoints.down('xs')]: {
-            height: '48vh',
+            height: '55vh',
         }
     },
     title: {
@@ -41,6 +41,7 @@ const useStyle = makeStyles((theme) => ({
         marginBottom: '2vh',
         fontWeight: 600,
         fontSize: 18,
+        fontFamily: theme.typography.h3.fontFamily
     },
     description: {
         lineHeight: '24px',
@@ -55,7 +56,7 @@ const useStyle = makeStyles((theme) => ({
 
 const Lecture = (props) => {
     const classes = useStyle();
-    const { logo, title, about } = props;
+    const { title, about } = props;
 
     return (
         <Box className={classes.container}>

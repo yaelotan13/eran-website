@@ -1,14 +1,30 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Typography, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import ScrollAnimation from 'react-animate-on-scroll';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link } from 'react-scroll';
 import { withNamespaces } from 'react-i18next';
 
+import eran from '../../../assets/images/me.jpg';
+
 const useStyle = makeStyles((theme) => ({
     content: {
         marginTop: '20vh',
+    },
+    avatarContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
+    avatar: {
+        height: 180,
+        width: 180,
+        marginBottom: '2vh',
+        [theme.breakpoints.down('xs')]: {
+            height: 110,
+            width: 110,
+        }
     },
     mainHeader: {
         color: theme.palette.white,
@@ -44,11 +60,14 @@ const useStyle = makeStyles((theme) => ({
         }
     },
     icon: {
-        marginTop: '50vh',
+        marginTop: '25vh',
         height: 60,
         width: 60,
         cursor: 'pointer',
         color: theme.palette.white,
+        [theme.breakpoints.down('xs')]: {
+            marginTop: '20vh',
+        }
     },
 }));
 
@@ -65,7 +84,10 @@ const HomeScreen = ({ t }) => {
                 animateOnce={true}
             >
                 <Box className={classes.content}>
-                    <Typography className={classes.mainHeader} variant="h1">{t('name')}</Typography>
+                    <Box className={classes.avatarContainer}>
+                        <Avatar className={classes.avatar} src={eran} />
+                        <Typography className={classes.mainHeader} variant="h1">{t('name')}</Typography>
+                    </Box>
                     <Box className={classes.whoAmIContainer}>
                         <ScrollAnimation
                             animateIn='fadeInDown'
