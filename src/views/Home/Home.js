@@ -10,9 +10,7 @@ import About from '../About';
 import Contact from '../Contact';
 import { Navigation, HomeScreen } from './components';
 
-import mars from '../../assets/images/mars-orange.jpg';
 import spaceBlue from '../../assets/images/space-blue.jpg';
-import spacePurple from '../../assets/images/space-purple.jpg';
 
 const useStyles = makeStyles((theme) => ({
     firstScreen: {
@@ -28,8 +26,11 @@ const useStyles = makeStyles((theme) => ({
         height: '100vh',
         width: '100vw',
         backgroundColor: theme.palette.background.default,
+        [theme.breakpoints.down('sm')]: {
+            height: '130vh',
+        },
         [theme.breakpoints.down('xs')]: {
-            height: '80vh',
+            height: '160vh',
         }
     },
     thirdScreen: {
