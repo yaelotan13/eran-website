@@ -23,15 +23,15 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     secondScreen: {
-        height: '100vh',
+        height: '150vh',
         width: '100vw',
         backgroundColor: theme.palette.background.default,
-        [theme.breakpoints.down('sm')]: {
-            height: '130vh',
+        [theme.breakpoints.down('md')]: {
+            height: '170vh',
         },
-        [theme.breakpoints.down('xs')]: {
-            height: '160vh',
-        }
+        [theme.breakpoints.down('sm')]: {
+            height: '260vh',
+        },
     },
     thirdScreen: {
         height: '140vh',

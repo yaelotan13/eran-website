@@ -6,6 +6,7 @@ import { withNamespaces } from 'react-i18next';
 
 import i18n from '../../i18n';
 import eran from '../../assets/images/me.jpg';
+import { Lectures } from './components';
 
 const useStyle = makeStyles((theme) => ({
     container: {
@@ -46,7 +47,10 @@ const useStyle = makeStyles((theme) => ({
     },
     rightToLeft: {
         textAlign: 'right',
-    }
+    },
+    lecturesContainer: {
+        marginTop: '12vh'
+    },
 }));
 
 const Articles = ({ t }) => {
@@ -77,6 +81,9 @@ const Articles = ({ t }) => {
                             </Typography>
                     </ScrollAnimation>
                 </Box>
+            </Box>
+            <Box className={classes.lecturesContainer}>
+                <Lectures />
             </Box>
         </Box>
     )
