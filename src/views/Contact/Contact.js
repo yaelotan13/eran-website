@@ -2,10 +2,11 @@ import React from 'react';
 import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { withNamespaces } from 'react-i18next';
 
 import phone from '../../assets/images/phone.png';
 import email from '../../assets/images/email.png';
-import rocket from '../../assets/images/rocket.gif';
+import alien from '../../assets/images/alien.gif';
 
 const useStyle = makeStyles((theme) => ({
     container: {
@@ -56,7 +57,7 @@ const useStyle = makeStyles((theme) => ({
     image: {
         height: '60%',
         width: '70%',
-        backgroundImage:`url(${rocket})`,
+        backgroundImage:`url(${alien})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
         backgroundPosition: 'center',
@@ -129,7 +130,7 @@ const useStyle = makeStyles((theme) => ({
     }
 }));
 
-const Contact = (props) => {
+const Contact = ({ t }) => {
     const classes = useStyle();
 
     return (
@@ -141,7 +142,7 @@ const Contact = (props) => {
                     initiallyVisible={false}
                     animateOnce={true}
                 >
-                    <Typography className={classes.mainTitle} variant="h1">Let's Keep In Touch!</Typography>
+                    <Typography className={classes.mainTitle} variant="h1">{t('keep-in-touch')}</Typography>
                 </ScrollAnimation>   
                 <ScrollAnimation 
                     animateIn='fadeIn'
@@ -149,7 +150,7 @@ const Contact = (props) => {
                     initiallyVisible={false}
                     animateOnce={true}
                 >
-                    <Typography className={classes.subTitle} variant="h4">I would love to hear from you 🙂</Typography>
+                    <Typography className={classes.subTitle} variant="h4">{t('here-from-you')}</Typography>
                 </ScrollAnimation>   
                 <Box className={classes.contactInfoContainer}>
                     <ScrollAnimation 
@@ -161,7 +162,7 @@ const Contact = (props) => {
                         <Box className={classes.contactInfo}>
                             <Box className={[classes.icon, classes.iphoneIcon].join(" ")} />
                             <Typography className={classes.info}>
-                                <a href="tel:054-6323450">054-6323450</a>
+                                <a href="tel:054-5534554">054-5534554</a>
                             </Typography>
                         </Box>
                     </ScrollAnimation> 
@@ -174,7 +175,7 @@ const Contact = (props) => {
                     <Box className={classes.contactInfo}>
                         <Box className={[classes.icon, classes.emailIcon].join(" ")}/>
                         <Typography className={classes.info}>
-                            <a href="mailto:yaelotan19@gmail.com">yaelotan19@gmail.com</a>
+                            <a href="mailto:eran.vos@gmail.com">eran.vos@gmail.com</a>
                         </Typography>
                     </Box>
                     </ScrollAnimation> 
@@ -188,4 +189,4 @@ const Contact = (props) => {
     )
 };
 
-export default Contact;
+export default withNamespaces()(Contact);

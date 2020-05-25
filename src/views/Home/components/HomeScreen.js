@@ -6,7 +6,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link } from 'react-scroll';
 import { withNamespaces } from 'react-i18next';
 
-import eran from '../../../assets/images/me.jpg';
+import eran from '../../../assets/images/eran.jpg';
 
 const useStyle = makeStyles((theme) => ({
     content: {
