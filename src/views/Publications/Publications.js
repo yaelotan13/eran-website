@@ -3,7 +3,6 @@ import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { withNamespaces } from 'react-i18next';
 
-import i18n from '../../i18n';
 import { PublicationsList } from './components';
 import { SubTitle } from '../../components';
 
@@ -26,7 +25,7 @@ const Publications = ({ t }) => {
     return (
         <Box className={classes.container}>
             <Box className={classes.headerContainer}>
-                <SubTitle delay={200} title={t('publication')} />
+                <SubTitle delay={200} title={t('publication-sub-title')} />
             </Box>
             <PublicationsList />
         </Box>
