@@ -7,6 +7,7 @@ import { Element } from 'react-scroll';
 
 import Publications from '../Publications';
 import About from '../About';
+import Contact from '../Contact';
 import { Navigation, HomeScreen } from './components';
 
 import mars from '../../assets/images/mars-orange.jpg';
@@ -74,7 +75,7 @@ const Home = (props) => {
             <Element name="screen4" className="element">
                 <ScrollAnimation animateIn="fadeIn">
                     <Box className={classes.firthScreen}>
-                        goodbey now
+                        <Contact />
                     </Box>
                 </ScrollAnimation>
             </Element>              

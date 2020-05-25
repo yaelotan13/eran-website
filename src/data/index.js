@@ -5,8 +5,6 @@ import FaceIcon from '@material-ui/icons/Face';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
-export const getScreens = () => ['Home', 'About', 'Publication', 'Conatct'];
-
 export const getDrawerIcon = (index) => {
     switch (index) {
         case 0: {

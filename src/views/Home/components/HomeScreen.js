@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import ScrollAnimation from 'react-animate-on-scroll';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link } from 'react-scroll';
+import { withNamespaces } from 'react-i18next';
 
 const useStyle = makeStyles((theme) => ({
     content: {
@@ -51,7 +52,7 @@ const useStyle = makeStyles((theme) => ({
     },
 }));
 
-const HomeScreen = (props) => {
+const HomeScreen = ({ t }) => {
     const classes = useStyle();
 
     return (
@@ -64,7 +65,7 @@ const HomeScreen = (props) => {
                 animateOnce={true}
             >
                 <Box className={classes.content}>
-                    <Typography className={classes.mainHeader} variant="h1">Eran Vos</Typography>
+                    <Typography className={classes.mainHeader} variant="h1">{t('name')}</Typography>
                     <Box className={classes.whoAmIContainer}>
                         <ScrollAnimation
                             animateIn='fadeInDown'
@@ -72,7 +73,7 @@ const HomeScreen = (props) => {
                             initiallyVisible={false}
                             animateOnce={true}
                         >
-                            <Typography className={classes.whoAmI} variant="h5">A description about me, my title and what I research on a daily basis</Typography>
+                            <Typography className={classes.whoAmI} variant="h5">{t('home-description')}</Typography>
                         </ScrollAnimation>
                     </Box>          
                 </Box>
@@ -91,4 +92,4 @@ const HomeScreen = (props) => {
     );
 };
 
-export default HomeScreen;
+export default withNamespaces()(HomeScreen);
