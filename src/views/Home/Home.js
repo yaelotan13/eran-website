@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
             height: '300vh',
         },
         [theme.breakpoints.down('xs')]: {
-            height: '370vh',
+            height: '410vh',
         },
     },
     thirdScreen: {

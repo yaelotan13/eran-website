@@ -1,11 +1,10 @@
 import React from 'react';
-import { Box, Typography, Avatar } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { withNamespaces } from 'react-i18next';
 
 import i18n from '../../i18n';
-import eran from '../../assets/images/me.jpg';
 import { Lectures } from './components';
 
 const useStyle = makeStyles((theme) => ({
@@ -17,14 +16,6 @@ const useStyle = makeStyles((theme) => ({
         alignItems: 'center',
         whiteSpace: 'pre-wrap',
         paddingTop: '8vh',
-    },
-    eranImage: {
-        width: 140,
-        height: 140,
-        [theme.breakpoints.down('md')]: {
-            width: 120,
-            height: 120,
-        }
     },
     description: {
         marginTop: '1vh'
@@ -60,7 +51,6 @@ const Articles = ({ t }) => {
         <Box className={classes.container}>
             <Box>
                 <Box className={classes.headerContainer}>
-                    <Avatar className={classes.eranImage} src={eran} />
                     <Typography className={classes.description} variant="h3">
                         {t('about-me-title')}
                     </Typography>

@@ -5,11 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { withNamespaces } from 'react-i18next';
 
 import i18n from '../../../i18n';
-import Infinity from '../../../assets/images/infinity.png';
-import sheCodes from '../../../assets/images/she-codes.png';
-import IDC from '../../../assets/images/idc.png';
-
-import Education from './Lecture';
+import Lecture from './Lecture';
 
 const useStyle = makeStyles((theme) => ({
     intro: {
@@ -42,9 +38,9 @@ const Lectures = ({ t }) => {
     const INITIAL_DELAY = 300;
 
     const data = [
-        new LectureData(1, IDC, t('lacture-1-title'), t('lacture-1-description')),
-        new LectureData(2, sheCodes, t('lacture-2-title'), t('lacture-2-description')),
-        new LectureData(3, Infinity, t('lacture-3-title'), t('lacture-3-description')),
+        new LectureData(1, null, t('lacture-1-title'), t('lacture-1-description')),
+        new LectureData(2, null, t('lacture-2-title'), t('lacture-2-description')),
+        new LectureData(3, null, t('lacture-3-title'), t('lacture-3-description')),
     ];
 
     return (
@@ -53,7 +49,7 @@ const Lectures = ({ t }) => {
                 {t('lectures-intro')}
             </Typography>
             <Grid container justify="space-around">
-                {data.map((education, index) => 
+                {data.map((lecture, index) => 
                     <ScrollAnimation 
                         animateIn='fadeInUp'
                         delay={INITIAL_DELAY + index * 130}
@@ -61,12 +57,10 @@ const Lectures = ({ t }) => {
                         animateOnce={true}
                     >
                         <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-                            <Education 
-                                key={education.title.concat(index)} 
-                                title={education.title} 
-                                years={education.years}
-                                logo={education.logo}
-                                about={education.about}
+                            <Lecture 
+                                key={lecture.title.concat(index)} 
+                                title={lecture.title} 
+                                about={lecture.about}
                             />
                         </Grid>
                     </ScrollAnimation>
