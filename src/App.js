@@ -5,7 +5,7 @@ import './App.css';
 import Home from './views/Home';
 import theme from './theme/index';
 
-function App() {
+function App({ t }) {
   return (
     <ThemeProvider theme={theme}>
         <div className="App">
