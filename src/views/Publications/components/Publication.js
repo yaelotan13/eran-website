@@ -33,16 +33,17 @@ const useStyle = makeStyles((theme) => ({
         fontSize: 16,
         fontFamily: theme.typography.h3.fontFamily,
         marginTop: '5%',
-        marginBottom: '5%'
     },
-    years: {
-        marginBottom: '4%'
+    publisher: {
+        fontFamily: theme.typography.h3.fontFamily,
+        fontSize: 12,
+        marginBottom: '5%'
     }
 }));
 
 const Publication = (props) => {
     const classes = useStyle();
-    const { logo, title, about, link } = props;
+    const { logo, title, about, link, publisher } = props;
 
     return (
         <Box className={classes.container}>
@@ -57,6 +58,7 @@ const Publication = (props) => {
                         height: 150,
                     }}/>
                     <Typography variant="h5" className={classes.title}>{title}</Typography>
+                    <Typography className={classes.publisher}>{publisher}</Typography>
                     <Typography>{about}</Typography>
                 </Box>
             </Link>
