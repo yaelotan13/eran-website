@@ -1,41 +1,65 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Typography, Avatar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { withNamespaces } from 'react-i18next';
 
+import i18n from '../../i18n';
+import eran from '../../assets/images/me.jpg';
+
 const useStyle = makeStyles((theme) => ({
     container: {
-        marginTop: '2%',
-        padding: '6%',
     },
     headerContainer: {
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
         whiteSpace: 'pre-wrap',
-        marginTop: '-4%',
-        marginLeft: '8%',
-        marginBottom: '4%',
+        paddingTop: '8vh',
+    },
+    eranImage: {
+        width: 140,
+        height: 140,
+        [theme.breakpoints.down('md')]: {
+            width: 120,
+            height: 120,
+        }
+    },
+    description: {
+        marginTop: '1vh'
     },
     contentContainer: {
-        marginLeft: '8%',
-        marginRight: '8%',
-        marginTop: '5%'
+        marginTop: '6vh',
+        display: 'flex',
+        justifyContent: 'center',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '8vh',
+        },
     },
     content: {
-        lineHeight: theme.typography.caption.lineHeight,
-        textAlign: 'left'
+        lineHeight: theme.typography.h3.lineHeight,
+        fontFamily: theme.typography.h3.fontFamily,
+        fontSize: 18,
+        textAlign: 'left',
+        wordWrap: 'break-word',
+        width: '80vw',
+    },
+    rightToLeft: {
+        textAlign: 'right',
     }
 }));
 
 const Articles = ({ t }) => {
     const classes = useStyle();
-
+    console.log(i18n.language)
     return (
         <Box className={classes.container}>
             <Box>
                 <Box className={classes.headerContainer}>
-                    <Typography className={classes.description} variant="subtitle1">{t('about-me-title')}</Typography>
+                    <Avatar className={classes.eranImage} src={eran} />
+                    <Typography className={classes.description} variant="h3">
+                        {t('about-me-title')}
+                    </Typography>
                 </Box>
                 <Box className={classes.contentContainer}>
                     <ScrollAnimation 
@@ -45,14 +69,12 @@ const Articles = ({ t }) => {
                         initiallyVisible={false}
                         animateOnce={true}
                     >
-                        <Typography variant="subtitle2" className={classes.content}>
-                        Hi, my name is Eran Foss and I am a third year doctoral student of the planetary sciences at the Weizmann Institute.
-                        I earned my bachelor's degree in physics and atmospheric science at Tel Aviv University. During my undergraduate degree, I published an article on internal structures of planets outside the solar system. I earned my master's degree at the Weizmann Institute of Planetary Sciences as I explored the climate and water cycle in Mars.
-                        In Ph.D., I build a climate model that accurately predicts the Mars water cycle under climate change that Mars has experienced in the last 10 million years and gives predictions for the climate of Mars.
-                        Among other things, I'm exploring other things like clouds on Earth and the chemistry of underground oceans in different moons in the solar system.
-                        In my time I love to do sports and especially surf and wind. In addition, I volunteer at a nonprofit called "My Wave" that uses a surfboard learning tool for at-risk youth education.
-                        In my past, after my release from the military, I was a software developer at several startups and a product manager at Verint. 
-                        </Typography>
+                        <Typography 
+                            variant="subtitle2" 
+                            className={i18n.language === "Hebrew" ? [classes.content, classes.rightToLeft].join(' ') : classes.content}
+                        >
+                                {t('about-me-content')}
+                            </Typography>
                     </ScrollAnimation>
                 </Box>
             </Box>

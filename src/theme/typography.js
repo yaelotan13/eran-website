@@ -22,7 +22,7 @@ export default {
     fontWeight: 500,
     fontSize: '24px',
     letterSpacing: '-0.06px',
-    lineHeight: '28px',
+    lineHeight: '34px',
     fontFamily: "'Muli', sans-serif",
   },
   h4: {
