@@ -41,8 +41,8 @@ const PublicationsList = ({ t }) => {
         new PublicationData(1, DNA, t('davidson'), t('publication-1-title'), t('publication-1-description'), 'https://davidson.weizmann.ac.il/online/sciencepanorama/%D7%94%D7%9E%D7%93%D7%A2-%D7%A9%D7%9C-%D7%94%D7%A2%D7%A9%D7%95%D7%A8'),
         new PublicationData(2, marceArticle, t('davidson'), t('publication-2-title'), t('publication-2-description'), 'https://davidson.weizmann.ac.il/online/askexpert/%D7%94%D7%90%D7%9D-%D7%90%D7%A4%D7%A9%D7%A8-%D7%9C%D7%94%D7%90%D7%A8%D7%99%D7%A5-%D7%90%D7%AA-%D7%9E%D7%90%D7%93%D7%99%D7%9D'),
         new PublicationData(3, hermon, t('davidson'), t('publication-3-title'), t('publication-3-description'), 'https://davidson.weizmann.ac.il/online/askexpert/%D7%91%D7%99%D7%95%D7%9D-%D7%98%D7%95%D7%91-%D7%A8%D7%95%D7%90%D7%99%D7%9D-%D7%9E%D7%9B%D7%90%D7%9F-%D7%90%D7%AA-%D7%94%D7%97%D7%A8%D7%9E%D7%95%D7%9F'),
-        new PublicationData(4, marce2, t('ynet'), t('publication-4-title'), t('publication-4-description'), 'https://davidson.weizmann.ac.il/online/%D7%94%D7%A9%D7%9C%D7%99%D7%97%D7%99%D7%9D-%D7%A9%D7%9C%D7%A0%D7%95-%D7%A2%D7%9C-%D7%9E%D7%90%D7%93%D7%99%D7%9D'),
-        new PublicationData(5, marce3, t('ynet'), t('publication-5-title'), t('publication-5-description'), 'https://davidson.weizmann.ac.il/online/sciencenews/%D7%A7%D7%A8%D7%95%D7%91-%D7%9C%D7%94%D7%A4%D7%9C%D7%99%D7%90-%D7%95%D7%92%D7%93%D7%95%D7%9C-%D7%9E%D7%AA%D7%9E%D7%99%D7%93'),
+        new PublicationData(4, marce2, t('ynet'), t('publication-4-title'), t('publication-4-description'), 'https://www.ynet.co.il/articles/0,7340,L-5334452,00.html'),
+        new PublicationData(5, marce3, t('ynet'), t('publication-5-title'), t('publication-5-description'), 'https://www.ynet.co.il/articles/0,7340,L-5270527,00.html'),
         new PublicationData(6, dancer, t('davidson'), t('publication-6-title'), t('publication-6-description'), 'https://davidson.weizmann.ac.il/online/askexpert/%D7%94%D7%9E%D7%93%D7%A2-%D7%A9%D7%9C-%D7%A1%D7%99%D7%91%D7%95%D7%91-%D7%94%D7%A8%D7%A7%D7%93%D7%A0%D7%99%D7%AA'),
     ];
 
