@@ -10,8 +10,11 @@ const useStyle = makeStyles(theme => ({
     flagsContainer: {
         display: 'flex',
     },
-    hebrewFlag: {
+    hebrewFlagDesktop: {
         marginLeft: '-2vw'
+    },
+    hebrewFlagMobile: {
+        marginLeft: '-6vw'
     },
     flag: {
         width: 25,
@@ -22,10 +25,13 @@ const useStyle = makeStyles(theme => ({
 
 const Languages = (props) => {
     const classes = useStyle();
+    const { mobile } = props;
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     }
+
+    const getIsraelFlagStyle = () => mobile ? [classes.flag, classes.hebrewFlagMobile].join(' ') : [classes.flag, classes.hebrewFlagDesktop].join(' ');
 
     return (
         <Box className={classes.flagsContainer}>
@@ -33,7 +39,7 @@ const Languages = (props) => {
                 <Avatar className={classes.flag} src={usa} />
             </Button>
             <Button onClick={() => changeLanguage('Hebrew')}>
-                <Avatar className={[classes.flag, classes.hebrewFlag].join(' ')} src={israel} />
+                <Avatar className={getIsraelFlagStyle()} src={israel} />
             </Button>
         </Box>
     )

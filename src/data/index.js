@@ -1,26 +1,28 @@
 import React from 'react';
 
-import HomeIcon from '@material-ui/icons/Home';
-import FaceIcon from '@material-ui/icons/Face';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import { Icon } from '../components';
+
+import home from '../assets/images/home-nav.png';
+import about from '../assets/images/about-nav.png';
+import rocket from '../assets/images/rocket-nav.png';
+import contact from '../assets/images/email-nav.png';
 
 export const getDrawerIcon = (index) => {
     switch (index) {
         case 0: {
-            return <HomeIcon />
+            return <Icon icon={home} />
         }
         case 1: {
-            return <FaceIcon />
+            return <Icon icon={about} />
         }
         case 2: {
-            return <WhatshotIcon />
+            return <Icon icon={rocket} />
         }
         case 3: {
-            return <MailOutlineIcon />
+            return <Icon icon={contact} />
         }
         default: {
-            return <HomeIcon />
+            return <Icon icon={home} />
         }
     }
 };
