@@ -20,12 +20,12 @@ const useStyle = makeStyles((theme) => ({
         boxShadow: "1px 1px 3px #9E9E9E",
         backgroundColor: 'white',
         boxSizing: 'border-box',
-        width: '30vw',
-        height: '42vh',
+        width: '25vw',
+        height: '45vh',
         marginTop: '8%',
         [theme.breakpoints.down('md')]: {
-            width: '30vw',
-            height: '54vh',
+            width: '25vw',
+            height: '65vh',
         },
         [theme.breakpoints.down('sm')]: {
             width: '80vw',
