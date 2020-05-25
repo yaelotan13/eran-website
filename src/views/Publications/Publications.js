@@ -12,12 +12,12 @@ const useStyle = makeStyles((theme) => ({
         marginTop: '2%',
         padding: '6%',
     },
-    educationContainer: {
-        height: '50vh',
-        [theme.breakpoints.down('xs')]: {
-            height: '100vh',
-        }
-    },
+    headerContainer: {
+        marginBottom: '-5vh',
+        [theme.breakpoints.down('lg')]: {
+            marginLeft: '3vw',
+        },
+    }
 }));
 
 const Publications = ({ t }) => {
@@ -25,10 +25,10 @@ const Publications = ({ t }) => {
 
     return (
         <Box className={classes.container}>
-            <Box className={classes.educationContainer}>
+            <Box className={classes.headerContainer}>
                 <SubTitle delay={200} title={t('publication')} />
-                <PublicationsList />
             </Box>
+            <PublicationsList />
         </Box>
     )
 };

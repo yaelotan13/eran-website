@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyle = makeStyles((theme) => ({
     container: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             display: 'flex',
             justifyContent: 'center',
         }
@@ -17,19 +17,21 @@ const useStyle = makeStyles((theme) => ({
         padding: 20,
         boxShadow: "1px 1px 3px #9E9E9E",
         backgroundColor: 'white',
-        [theme.breakpoints.between('sm', 'xl')]: {
+        [theme.breakpoints.between('md', 'xl')]: {
             boxSizing: 'border-box',
-            width: '25vw',
-            height: '30vh',
+            width: '35vw',
+            height: '40vh',
             marginTop: '12%'
         },
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '80vw',
             marginTop: '6%'
         }
     },
     title: {
-        fontWeight: theme.typography.h5.fontWeight,
+        fontWeight: 700,
+        fontSize: 16,
+        fontFamily: theme.typography.h3.fontFamily,
         marginTop: '5%',
         marginBottom: '5%'
     },
@@ -44,20 +46,20 @@ const Publication = (props) => {
 
     return (
         <Box className={classes.container}>
-            <Box className={classes.education}>
-                <Box style={{
-                    backgroundImage: `url(${logo})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    width: '100%',
-                    height: 150,
-                }}/>
-                <a href={link}>
+            <Link href={link} underline="none" title="to article">
+                <Box className={classes.education}>
+                    <Box style={{
+                        backgroundImage: `url(${logo})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        width: '100%',
+                        height: 150,
+                    }}/>
                     <Typography variant="h5" className={classes.title}>{title}</Typography>
-                </a>
-                <Typography>{about}</Typography>
-            </Box>
+                    <Typography>{about}</Typography>
+                </Box>
+            </Link>
         </Box>
     )
 };

@@ -11,7 +11,7 @@ const useStyle = makeStyles((theme) => ({
             justifyContent: 'center',
         }
     },
-    lacture: {
+    lecture: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -21,16 +21,19 @@ const useStyle = makeStyles((theme) => ({
         backgroundColor: 'white',
         boxSizing: 'border-box',
         width: '30vw',
-        height: '35vh',
+        height: '42vh',
         marginTop: '8%',
         [theme.breakpoints.down('md')]: {
             width: '30vw',
-            height: '45vh',
+            height: '54vh',
         },
         [theme.breakpoints.down('sm')]: {
             width: '80vw',
             height: '35vh',
             marginTop: '6%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: '48vh',
         }
     },
     title: {
@@ -56,7 +59,7 @@ const Lecture = (props) => {
 
     return (
         <Box className={classes.container}>
-            <Box className={classes.lacture}>
+            <Box className={classes.lecture}>
                 <Typography variant="h5" className={classes.title}>{title}</Typography>
                 <Typography className={i18n.language === 'Hebrew' ? [classes.description, classes.rightToLeft].join(' ') : classes.description}>{about}</Typography>
             </Box>
