@@ -71,6 +71,7 @@ const useStyle = makeStyles((theme) => ({
         marginTop: '10vh',
         width: '45vw',
         justifyContent: 'space-between',
+        paddingBottom: '5vh',
         [theme.breakpoints.down('sm')]: {
             width: '90vw',
             flexDirection: 'column',
@@ -138,7 +139,7 @@ const Contact = ({ t }) => {
             <Box className={classes.content}>
                 <ScrollAnimation 
                     animateIn='fadeIn'
-                    delay={300}
+                    delay={500}
                     initiallyVisible={false}
                     animateOnce={true}
                 >
@@ -146,7 +147,7 @@ const Contact = ({ t }) => {
                 </ScrollAnimation>   
                 <ScrollAnimation 
                     animateIn='fadeIn'
-                    delay={500}
+                    delay={900}
                     initiallyVisible={false}
                     animateOnce={true}
                 >
@@ -155,7 +156,7 @@ const Contact = ({ t }) => {
                 <Box className={classes.contactInfoContainer}>
                     <ScrollAnimation 
                         animateIn='fadeIn'
-                        delay={900}
+                        delay={1100}
                         initiallyVisible={false}
                         animateOnce={true}
                     >
@@ -168,7 +169,7 @@ const Contact = ({ t }) => {
                     </ScrollAnimation> 
                     <ScrollAnimation 
                         animateIn='fadeIn'
-                        delay={1200}
+                        delay={900}
                         initiallyVisible={false}
                         animateOnce={true}
                     >
