@@ -18,7 +18,9 @@ const useStyle = makeStyles((theme) => ({
         fontWeight: 600,
         fontFamily: theme.typography.h3.fontFamily,
         paddingLeft: '10vw',
-        marginBottom: '5vh'
+        marginBottom: '5vh',
+        wordWrap: 'break-word',
+        width: '80vw',
     },
     rightToLeft: {
         textAlign: 'right',

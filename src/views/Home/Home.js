@@ -23,28 +23,34 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     secondScreen: {
-        height: '150vh',
+        height: '160vh',
         width: '100vw',
         backgroundColor: theme.palette.background.default,
         [theme.breakpoints.down('md')]: {
-            height: '170vh',
+            height: '190vh',
         },
         [theme.breakpoints.down('sm')]: {
-            height: '260vh',
+            height: '300vh',
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: '370vh',
         },
     },
     thirdScreen: {
-        height: '140vh',
+        height: '170vh',
         width: '100vw',
         backgroundColor: theme.palette.white,
+        [theme.breakpoints.down('sm')]: {
+            height: '350vh',
+        },
         [theme.breakpoints.down('xs')]: {
-            height: '340vh',
+            height: '320vh',
         }
     },
     firthScreen: {
         height: '100vh',
         width: '100vw',
-        backgroundColor: theme.palette.white
+        backgroundColor: theme.palette.background.default
     },
 }));       
  

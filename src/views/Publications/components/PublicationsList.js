@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { withNamespaces } from 'react-i18next';
 
@@ -12,6 +13,15 @@ import dancer from '../../../assets/images/dancer.png';
 
 import Publication from './Publication';
 
+const useStyle = makeStyles((theme) => ({
+    container: {
+        width: '80vw',
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: '5vw'
+    }
+}));
+
 class PublicationData {
     constructor(id, logo, title, about, link) {
         this.id = id;
@@ -23,6 +33,7 @@ class PublicationData {
 };
 
 const PublicationsList = ({ t }) => {
+    const classes = useStyle();
     const INITIAL_DELAY = 400;
 
     const data = [
@@ -35,16 +46,16 @@ const PublicationsList = ({ t }) => {
     ];
 
     return (
-        <Box>
+        <Box className={classes.container}>
             <Grid container justify="space-around">
                 {data.map((publication, index) => 
                     <ScrollAnimation 
                         animateIn='fadeInUp'
-                        delay={INITIAL_DELAY + index * 400}
+                        delay={INITIAL_DELAY + index * 200}
                         initiallyVisible={false}
                         animateOnce={true}
                     >
-                        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                             <Publication 
                                 key={publication.title.concat(index)} 
                                 title={publication.title} 
