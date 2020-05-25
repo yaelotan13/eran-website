@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
             height: '350vh',
         },
         [theme.breakpoints.down('xs')]: {
-            height: '340vh',
+            height: '360vh',
         }
     },
     firthScreen: {
