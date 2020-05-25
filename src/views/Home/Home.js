@@ -23,14 +23,14 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     secondScreen: {
-        height: '160vh',
+        height: '130vh',
         width: '100vw',
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: theme.palette.white,
         [theme.breakpoints.down('md')]: {
-            height: '190vh',
+            height: '170vh',
         },
         [theme.breakpoints.down('sm')]: {
-            height: '300vh',
+            height: '240vh',
         },
         [theme.breakpoints.down('xs')]: {
             height: '410vh',
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     thirdScreen: {
         height: '170vh',
         width: '100vw',
-        backgroundColor: theme.palette.white,
+        backgroundColor: theme.palette.background.default,
         [theme.breakpoints.down('sm')]: {
             height: '350vh',
         },
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     firthScreen: {
         height: '100vh',
         width: '100vw',
-        backgroundColor: theme.palette.background.default
+        backgroundColor: theme.palette.white,
     },
 }));       
  

@@ -8,12 +8,15 @@ import i18n from '../../../i18n';
 import Lecture from './Lecture';
 
 const useStyle = makeStyles((theme) => ({
+    container: {
+        width: '80vw',
+        marginLeft: '10vw'
+    },
     intro: {
         textAlign: 'left',
         fontSize: 18,
         fontWeight: 600,
         fontFamily: theme.typography.h3.fontFamily,
-        paddingLeft: '10vw',
         marginBottom: '5vh',
         wordWrap: 'break-word',
         width: '80vw',
@@ -44,10 +47,17 @@ const Lectures = ({ t }) => {
     ];
 
     return (
-        <Box>
-            <Typography className={i18n.language === 'Hebrew' ? [classes.intro, classes.rightToLeft].join(' ') : classes.intro}>
-                {t('lectures-intro')}
-            </Typography>
+        <Box className={classes.container}>
+            <ScrollAnimation 
+                animateIn='fadeInUp'
+                delay={500}
+                initiallyVisible={false}
+                animateOnce={true}
+            >
+                <Typography className={i18n.language === 'Hebrew' ? [classes.intro, classes.rightToLeft].join(' ') : classes.intro}>
+                    {t('lectures-intro')}
+                </Typography>
+            </ScrollAnimation>
             <Grid container justify="space-around">
                 {data.map((lecture, index) => 
                     <ScrollAnimation 
